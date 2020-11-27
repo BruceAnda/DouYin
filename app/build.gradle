@@ -6,12 +6,17 @@ android {
 
     defaultConfig {
         applicationId "com.bw.douyin"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi-v7a'
+        }
     }
 
     buildTypes {
@@ -40,6 +45,9 @@ dependencies {
     // 沉浸式状态栏 : https://github.com/gyf-dev/ImmersionBar
     implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
 
+    // google官方ViewPager的升级版支持竖向滑动 https://developer.android.google.cn/jetpack/androidx/releases/viewpager2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
     // ButterKnife 代替findViewById 和 setOnClickListener : https://github.com/JakeWharton/butterknife
     implementation 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
@@ -52,4 +60,9 @@ dependencies {
 
     /* AndroidUtilCode https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md */
     implementation 'com.blankj:utilcodex:1.30.5'
+
+    // 视频播放器 完整版引入
+    implementation 'com.shuyu:gsyVideoPlayer-java:7.1.8'
+    //根据你的需求ijk模式的so
+    implementation 'com.shuyu:gsyVideoPlayer-armv7a:7.1.8'
 }
