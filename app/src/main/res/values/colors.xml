@@ -3,4 +3,13 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <!-- 标题文字颜色 -->
+    <color name="title_text_color">#CFCBC8</color>
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+    <!-- 白色 -->
+    <color name="white">#fff</color>
+    <!-- Tab正常颜色 -->
+    <color name="tab_normal">#CFCBC8</color>
 </resources>

@@ -64,7 +64,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     /**
-     * 设置全拼
+     * 设置全屏
      */
     protected void setFullScreen() {
         ImmersionBar.with(this).init();

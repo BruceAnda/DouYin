@@ -19,15 +19,17 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected int setLayoutId() {
+        // 设置页码要显示的布局文件
         return R.layout.activity_splash;
     }
 
     @Override
     protected void init() {
+        // 设置全屏
         setFullScreen();
 
-        // 延迟进入主页面
-        new CountDownTimer(1000, 1000) {
+        // 进入主页的延时计时器
+        new CountDownTimer(500, 500) {
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -38,6 +40,7 @@ public class SplashActivity extends BaseActivity {
             public void onFinish() {
                 // 进入主页面
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                // 销毁当前页面
                 finish();
             }
         }.start();
