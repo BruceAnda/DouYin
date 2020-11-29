@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@color/black">
+
+    <!-- 底部显示昵称 连接 跑马灯区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="120dp"
+        android:layout_marginBottom="18dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" @大致爱高清"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="只有 #允儿 的脸我才敢拉这么近"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.bw.douyin.view.widget.MarqueeTextView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text=" @大致爱高清 创作的原生 - 大致爱高清"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- 用户头像，视频点赞，评论，分享 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:paddingRight="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="52dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/white"
+                android:src="@drawable/head1"/>
+
+            <ImageView
+                android:id="@+id/iv_focus"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:padding="3dp"
+                android:src="@drawable/add_focus"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <com.like.LikeButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon_type="heart"
+            app:circle_start_color="@color/heart_dots"
+            app:like_drawable="@drawable/ic_heart_on"
+            app:unlike_drawable="@drawable/ic_heart_off"
+            app:dots_primary_color="@color/heart_dots"
+            app:dots_secondary_color="@color/heart_dots"
+            app:circle_end_color="@color/heart_dots"
+            app:icon_size="35dp"
+            app:anim_scale_factor="2"
+            />
+
+        <TextView
+            android:id="@+id/tv_likecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="22.5w"
+            android:textSize="12sp"
+            android:text="22.5w"
+            android:textColor="@color/white"
+            android:layout_marginTop="-22dp"/>
+
+        <ImageView
+            android:id="@+id/iv_comment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_comment"/>
+
+        <TextView
+            android:id="@+id/tv_commentcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="3823"
+            android:text="3823"
+            android:layout_marginTop="2dp"
+            android:textSize="12sp"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_share"/>
+
+        <TextView
+            android:id="@+id/tv_sharecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="3371"
+            android:text="3371"
+            android:textSize="12sp"
+            android:layout_marginTop="-5dp"
+            android:textColor="@color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/iv_record"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:background="@drawable/ic_record" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_head_anim"
+                android:layout_width="34dp"
+                android:src="@drawable/head1"
+                android:layout_height="34dp"
+                app:ease_radius="15dp"
+                app:es_shape_type="round"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

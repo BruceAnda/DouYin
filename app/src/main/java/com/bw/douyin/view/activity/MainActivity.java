@@ -6,7 +6,6 @@ import androidx.viewpager.widget.ViewPager;
 import com.bw.douyin.R;
 import com.bw.douyin.base.BaseActivity;
 import com.bw.douyin.event.PauseVideoEvent;
-import com.bw.douyin.utils.RxBus;
 import com.bw.douyin.view.adapter.CommPagerAdapter;
 import com.bw.douyin.view.fragment.MainFragment;
 import com.bw.douyin.view.fragment.PersonalHomeFragment;
@@ -77,28 +76,6 @@ public class MainActivity extends BaseActivity {
         // 设置适配器
         viewpager.setAdapter(pagerAdapter);
 
-        // Page页面改变的监听
-        viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                // 当page是0的时候播放视频
-                if (position == 0) {
-                    RxBus.getDefault().post(new PauseVideoEvent(true));
-                } else {    // 当页面时个人中心的时候暂停播放
-                    RxBus.getDefault().post(new PauseVideoEvent(false));
-                }
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
     }
 
 }

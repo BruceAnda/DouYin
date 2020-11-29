@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.bw.douyin.R;
 import com.bw.douyin.base.BaseFragment;
+import com.bw.douyin.view.widget.VideoView;
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer;
 
 import butterknife.BindView;
@@ -25,7 +26,7 @@ import butterknife.BindView;
 public class VideoFragment extends BaseFragment {
 
     @BindView(R.id.video_player)
-    StandardGSYVideoPlayer videoPlayer;
+    VideoView videoPlayer;
 
     private long mCurrentPosition = 0L;
 
@@ -50,9 +51,11 @@ public class VideoFragment extends BaseFragment {
         videoPlayer.setLooping(true);
         videoPlayer.setDismissControlTime(0);
 
+
         Bundle arguments = getArguments();
         String url = arguments.getString("url");
-        videoPlayer.setUpLazy(url, false, null, null, "");
+        //videoPlayer.setUpLazy(url, true, null, null, "");
+        videoPlayer.setUp(url, true, "");
     }
 
     @Override

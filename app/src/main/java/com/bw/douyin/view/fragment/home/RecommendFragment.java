@@ -39,11 +39,13 @@ public class RecommendFragment extends BaseFragment {
 
     @Override
     protected void init() {
+
         addUrls();
 
         adapter = new RecommendVideoAdapter(this, urls);
         adapter.setUrls(urls, false);
         videoViewPager.setAdapter(adapter);
+        videoViewPager.setOffscreenPageLimit(5);
 
         videoViewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
@@ -66,5 +68,7 @@ public class RecommendFragment extends BaseFragment {
         urls.add("http://blog.zhaoliang5156.cn/douyin/video/video6.mp4");
         urls.add("http://blog.zhaoliang5156.cn/douyin/video/video7.mp4");
         urls.add("http://blog.zhaoliang5156.cn/douyin/video/video8.mp4");
+
+
     }
 }

@@ -1,6 +1,17 @@
 package com.bw.douyin.application;
 
 import android.app.Application;
+import android.content.Context;
+
+import com.danikula.videocache.HttpProxyCacheServer;
+import com.shuyu.gsyvideoplayer.cache.ICacheManager;
+import com.shuyu.gsyvideoplayer.cache.ProxyCacheManager;
+import com.shuyu.gsyvideoplayer.player.PlayerFactory;
+import com.shuyu.gsyvideoplayer.utils.GSYVideoType;
+
+import java.io.File;
+
+import tv.danmaku.ijk.media.player.IMediaPlayer;
 
 /**
  *  @author 赵亮

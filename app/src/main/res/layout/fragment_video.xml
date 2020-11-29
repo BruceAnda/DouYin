@@ -5,9 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".view.fragment.home.VideoFragment">
 
-    <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
+    <com.bw.douyin.view.widget.VideoView
         android:id="@+id/video_player"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <com.bw.douyin.view.widget.ControllerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
