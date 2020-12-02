@@ -37,6 +37,7 @@ public class MainFragment extends BaseFragment {
     private FriendFragment friendFragment;
     private MessageFragment messageFragment;
     private MyFragment myFragment;
+    private PersonalHomeFragment personalHomeFragment;
 
     @Override
     protected int setLayoutId() {
@@ -107,10 +108,13 @@ public class MainFragment extends BaseFragment {
                         changeFragment(messageFragment);
                         break;
                     case 4:
-                        if (myFragment == null) {
+                        /*if (myFragment == null) {
                             myFragment = new MyFragment();
+                        }*/
+                        if (personalHomeFragment == null) {
+                            personalHomeFragment = new PersonalHomeFragment();
                         }
-                        changeFragment(myFragment);
+                        changeFragment(personalHomeFragment);
                         break;
                 }
             }

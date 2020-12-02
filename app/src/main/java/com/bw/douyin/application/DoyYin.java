@@ -3,7 +3,10 @@ package com.bw.douyin.application;
 import android.app.Application;
 import android.content.Context;
 
+import androidx.annotation.FontRes;
+
 import com.danikula.videocache.HttpProxyCacheServer;
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.shuyu.gsyvideoplayer.cache.ICacheManager;
 import com.shuyu.gsyvideoplayer.cache.ProxyCacheManager;
 import com.shuyu.gsyvideoplayer.player.PlayerFactory;
@@ -24,5 +27,8 @@ public class DoyYin extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        /* 初始化Fresco */
+        Fresco.initialize(this);
     }
 }

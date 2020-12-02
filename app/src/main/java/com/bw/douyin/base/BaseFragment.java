@@ -39,6 +39,19 @@ public abstract class BaseFragment extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        initData();
+    }
+
+    /**
+     * 加载数据的方法，子类需要加载数据重写，不需要加载不重写
+     */
+    protected void initData() {
+
+    }
+
     /**
      * 设置布局的方法
      * @return

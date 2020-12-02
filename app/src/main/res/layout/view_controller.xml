@@ -76,19 +76,24 @@
                 android:layout_centerHorizontal="true"/>
         </RelativeLayout>
 
-        <com.like.LikeButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:icon_type="heart"
-            app:circle_start_color="@color/heart_dots"
-            app:like_drawable="@drawable/ic_heart_on"
-            app:unlike_drawable="@drawable/ic_heart_off"
-            app:dots_primary_color="@color/heart_dots"
-            app:dots_secondary_color="@color/heart_dots"
-            app:circle_end_color="@color/heart_dots"
-            app:icon_size="35dp"
-            app:anim_scale_factor="2"
-            />
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+            <com.like.LikeButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:icon_type="heart"
+                app:circle_start_color="@color/heart_dots"
+                app:like_drawable="@drawable/ic_heart_on"
+                app:unlike_drawable="@drawable/ic_heart_off"
+                app:dots_primary_color="@color/heart_dots"
+                app:dots_secondary_color="@color/heart_dots"
+                app:circle_end_color="@color/heart_dots"
+                app:icon_size="20dp"
+                app:anim_scale_factor="2"
+                />
+        </RelativeLayout>
+
 
         <TextView
             android:id="@+id/tv_likecount"
@@ -97,8 +102,7 @@
             tools:text="22.5w"
             android:textSize="12sp"
             android:text="22.5w"
-            android:textColor="@color/white"
-            android:layout_marginTop="-22dp"/>
+            android:textColor="@color/white" />
 
         <ImageView
             android:id="@+id/iv_comment"

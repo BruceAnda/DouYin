@@ -1,4 +1,4 @@
-package com.bw.douyin.bean;
+package com.bw.douyin.model.bean;
 
 /**
  * create by libo
