@@ -1,0 +1,300 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.bw.douyin"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:5:5-66
+11-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:6:5-80
+12-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:6:22-78
+13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+13-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:7:5-79
+13-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:7:22-77
+14
+15    <!-- 高通GPU调试权限 -->
+16    <uses-permission android:name="com.qti.permission.PROFILER" />
+16-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-67
+16-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-64
+17    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+17-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-76
+17-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:22-73
+18    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+18-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-75
+18-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:22-72
+19    <uses-permission android:name="android.permission.CAMERA" />
+19-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:5-65
+19-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:22-62
+20    <uses-permission android:name="android.permission.WAKE_LOCK" />
+20-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:5-68
+20-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:22-65
+21    <uses-permission android:name="android.permission.FLASHLIGHT" />
+21-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:5-69
+21-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:22-66
+22    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+22-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:5-79
+22-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:22-76
+23    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+23-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:5-79
+23-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:22-76
+24    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+24-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:5-71
+24-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:22-68
+25    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+25-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:5-75
+25-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:22-72
+26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+26-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:5-79
+26-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:22-76
+27
+28    <uses-feature
+28-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:5-29:35
+29        android:glEsVersion="0x00030000"
+29-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:9-41
+30        android:required="true" />
+30-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:9-32
+31
+32    <application
+32-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:9:5-40:19
+33        android:name="com.bw.douyin.application.DoyYin"
+33-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:10:9-43
+34        android:allowBackup="true"
+34-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:11:9-35
+35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+35-->[androidx.core:core:1.3.1] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\35b74f38e74c6bfbff2defec668f895c\core-1.3.1\AndroidManifest.xml:24:18-86
+36        android:debuggable="true"
+37        android:icon="@mipmap/ic_launcher"
+37-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:12:9-43
+38        android:label="@string/app_name"
+38-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:13:9-41
+39        android:roundIcon="@mipmap/ic_launcher_round"
+39-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:14:9-54
+40        android:supportsRtl="true"
+40-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:15:9-35
+41        android:theme="@style/AppTheme" >
+41-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:16:9-40
+42        <activity
+42-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:17:9-18:61
+43            android:name="com.bw.douyin.view.activity.MainActivity"
+43-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:17:19-61
+44            android:screenOrientation="portrait" />
+44-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:18:13-49
+45        <activity
+45-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:20:9-29:20
+46            android:name="com.bw.douyin.view.activity.SplashActivity"
+46-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:20:19-63
+47            android:screenOrientation="portrait" >
+47-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:21:13-49
+48            <intent-filter>
+48-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:22:13-28:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:23:17-69
+49-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:23:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:25:17-77
+51-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:25:27-74
+52
+53                <action android:name="android.intent.action.VIEW" />
+53-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:27:17-68
+53-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:27:25-66
+54            </intent-filter>
+55        </activity>
+56
+57        <provider
+58            android:name="androidx.core.content.FileProvider"
+58-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:33:13-62
+59            android:authorities="com.bw.douyin.fileprovider"
+59-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:32:13-64
+60            android:exported="false"
+60-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:34:13-37
+61            android:grantUriPermissions="true" >
+61-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:35:13-47
+62            <meta-data
+62-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:36:13-38:54
+63                android:name="android.support.FILE_PROVIDER_PATHS"
+63-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:37:17-67
+64                android:resource="@xml/file_paths" />
+64-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:38:17-51
+65        </provider>
+66
+67        <activity android:name="cn.zhaoliang5156.shortvideolibrary.activity.DuetRecordActivity" />
+67-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:9-99
+67-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:19-96
+68        <activity android:name="cn.zhaoliang5156.shortvideolibrary.activity.VideoPlayerActivity" />
+68-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:9-100
+68-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:19-97
+69        <activity android:name="cn.zhaoliang5156.shortvideolibrary.activity.MusicPlayerActivity" />
+69-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:9-100
+69-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:19-97
+70        <activity android:name="cn.zhaoliang5156.shortvideolibrary.activity.MainActivity" >
+70-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:9-36:20
+70-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:19-90
+71        </activity>
+72        <activity android:name="cn.zhaoliang5156.shortvideolibrary.activity.MusicMergeActivity" />
+72-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:9-99
+72-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:19-96
+73        <activity
+73-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:9-40:55
+74            android:name="cn.zhaoliang5156.shortvideolibrary.activity.SpeedRecordActivity"
+74-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:13-91
+75            android:theme="@style/NoActionBarTheme" />
+75-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-52
+76        <activity
+76-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:9-43:55
+77            android:name="cn.zhaoliang5156.shortvideolibrary.activity.FFMediaRecordActivity"
+77-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-93
+78            android:theme="@style/NoActionBarTheme" />
+78-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:43:13-52
+79
+80        <meta-data
+80-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:9-47:35
+81            android:name="android.max_aspect"
+81-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:13-46
+82            android:value="2.4" /> <!-- 全面屏处理 -->
+82-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:47:13-32
+83        <meta-data
+83-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:48:9-50:36
+84            android:name="android.notch_support"
+84-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:49:13-49
+85            android:value="true" /> <!-- 刘海屏处理 -->
+85-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:50:13-33
+86        <meta-data
+86-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:9-47:35
+87            android:name="android.max_aspect"
+87-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:13-46
+88            android:value="2.4" /> <!-- 全面屏处理 -->
+88-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:47:13-32
+89        <meta-data
+89-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:48:9-50:36
+90            android:name="android.notch_support"
+90-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:49:13-49
+91            android:value="true" />
+91-->[:shortvideolibrary] D:\code1806A\DouYin\shortvideolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:50:13-33
+92
+93        <activity
+93-->[:cameralibrary] D:\code1806A\DouYin\cameralibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-13:55
+94            android:name="com.cgfay.camera.activity.CameraActivity"
+94-->[:cameralibrary] D:\code1806A\DouYin\cameralibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-68
+95            android:screenOrientation="portrait"
+95-->[:cameralibrary] D:\code1806A\DouYin\cameralibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-49
+96            android:theme="@style/NoActionBarTheme" />
+96-->[:cameralibrary] D:\code1806A\DouYin\cameralibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-52
+97        <activity android:name="com.cgfay.camera.activity.CameraSettingActivity" />
+97-->[:cameralibrary] D:\code1806A\DouYin\cameralibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:9-84
+97-->[:cameralibrary] D:\code1806A\DouYin\cameralibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:19-81
+98        <activity android:name="com.cgfay.camera.activity.WatermarkActivity" />
+98-->[:cameralibrary] D:\code1806A\DouYin\cameralibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:9-80
+98-->[:cameralibrary] D:\code1806A\DouYin\cameralibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:19-77
+99        <activity android:name="com.cgfay.image.activity.ImagePreviewActivity" />
+99-->[:imagelibrary] D:\code1806A\DouYin\imagelibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-82
+99-->[:imagelibrary] D:\code1806A\DouYin\imagelibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:19-79
+100        <activity android:name="com.cgfay.image.activity.ImageEditActivity" />
+100-->[:imagelibrary] D:\code1806A\DouYin\imagelibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-79
+100-->[:imagelibrary] D:\code1806A\DouYin\imagelibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-76
+101        <activity
+101-->[:videolibrary] D:\code1806A\DouYin\videolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-14:49
+102            android:name="com.cgfay.video.activity.VideoCutActivity"
+102-->[:videolibrary] D:\code1806A\DouYin\videolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-69
+103            android:theme="@style/VideoTheme" />
+103-->[:videolibrary] D:\code1806A\DouYin\videolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-46
+104        <activity
+104-->[:videolibrary] D:\code1806A\DouYin\videolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:9-17:49
+105            android:name="com.cgfay.video.activity.VideoEditActivity"
+105-->[:videolibrary] D:\code1806A\DouYin\videolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-70
+106            android:theme="@style/VideoTheme" />
+106-->[:videolibrary] D:\code1806A\DouYin\videolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-46
+107        <activity
+107-->[:videolibrary] D:\code1806A\DouYin\videolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:9-20:49
+108            android:name="com.cgfay.video.activity.MultiVideoActivity"
+108-->[:videolibrary] D:\code1806A\DouYin\videolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-71
+109            android:theme="@style/VideoTheme" />
+109-->[:videolibrary] D:\code1806A\DouYin\videolibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-46
+110        <activity
+110-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:10:9-14:75
+111            android:name="com.blankj.utilcode.util.UtilsTransActivity4MainProcess"
+111-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:11:13-83
+112            android:configChanges="orientation|keyboardHidden|screenSize"
+112-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:12:13-74
+113            android:theme="@style/ActivityTranslucent"
+113-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:13:13-55
+114            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+114-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:14:13-72
+115        <activity
+115-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:15:9-20:75
+116            android:name="com.blankj.utilcode.util.UtilsTransActivity"
+116-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:16:13-71
+117            android:configChanges="orientation|keyboardHidden|screenSize"
+117-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:17:13-74
+118            android:multiprocess="true"
+118-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:18:13-40
+119            android:theme="@style/ActivityTranslucent"
+119-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:19:13-55
+120            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+120-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:20:13-72
+121
+122        <provider
+122-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:22:9-30:20
+123            android:name="com.blankj.utilcode.util.UtilsFileProvider"
+123-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:23:13-70
+124            android:authorities="com.bw.douyin.utilcode.provider"
+124-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:24:13-69
+125            android:exported="false"
+125-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:25:13-37
+126            android:grantUriPermissions="true" >
+126-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:26:13-47
+127            <meta-data
+127-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:36:13-38:54
+128                android:name="android.support.FILE_PROVIDER_PATHS"
+128-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:37:17-67
+129                android:resource="@xml/util_code_provider_paths" />
+129-->D:\code1806A\DouYin\douyinmain\src\main\AndroidManifest.xml:38:17-51
+130        </provider>
+131
+132        <service
+132-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:32:9-38:19
+133            android:name="com.blankj.utilcode.util.MessengerUtils$ServerService"
+133-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:33:13-81
+134            android:exported="false" >
+134-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:34:13-37
+135            <intent-filter>
+135-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:35:13-37:29
+136                <action android:name="com.bw.douyin.messenger" />
+136-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:36:17-69
+136-->[com.blankj:utilcodex:1.30.5] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\508f3856af2a5c0a9047c659f0524190\jetified-utilcodex-1.30.5\AndroidManifest.xml:36:25-66
+137            </intent-filter>
+138        </service>
+139
+140        <provider
+140-->[androidx.camera:camera-camera2:1.0.0-alpha06] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\b26bfc27b5e084a0033328ea29ac38e8\camera-camera2-1.0.0-alpha06\AndroidManifest.xml:25:9-30:43
+141            android:name="androidx.camera.camera2.impl.Camera2Initializer"
+141-->[androidx.camera:camera-camera2:1.0.0-alpha06] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\b26bfc27b5e084a0033328ea29ac38e8\camera-camera2-1.0.0-alpha06\AndroidManifest.xml:26:13-75
+142            android:authorities="com.bw.douyin.camerax-init"
+142-->[androidx.camera:camera-camera2:1.0.0-alpha06] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\b26bfc27b5e084a0033328ea29ac38e8\camera-camera2-1.0.0-alpha06\AndroidManifest.xml:27:13-64
+143            android:exported="false"
+143-->[androidx.camera:camera-camera2:1.0.0-alpha06] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\b26bfc27b5e084a0033328ea29ac38e8\camera-camera2-1.0.0-alpha06\AndroidManifest.xml:28:13-37
+144            android:initOrder="100"
+144-->[androidx.camera:camera-camera2:1.0.0-alpha06] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\b26bfc27b5e084a0033328ea29ac38e8\camera-camera2-1.0.0-alpha06\AndroidManifest.xml:29:13-36
+145            android:multiprocess="true" />
+145-->[androidx.camera:camera-camera2:1.0.0-alpha06] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\b26bfc27b5e084a0033328ea29ac38e8\camera-camera2-1.0.0-alpha06\AndroidManifest.xml:30:13-40
+146        <provider
+146-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\09011945168b50c98d94a47fdabd2ca3\lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
+147            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+147-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\09011945168b50c98d94a47fdabd2ca3\lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
+148            android:authorities="com.bw.douyin.lifecycle-process"
+148-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\09011945168b50c98d94a47fdabd2ca3\lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
+149            android:exported="false"
+149-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\09011945168b50c98d94a47fdabd2ca3\lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
+150            android:multiprocess="true" />
+150-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Dell Precision\.gradle\caches\transforms-2\files-2.1\09011945168b50c98d94a47fdabd2ca3\lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
+151    </application>
+152
+153</manifest>

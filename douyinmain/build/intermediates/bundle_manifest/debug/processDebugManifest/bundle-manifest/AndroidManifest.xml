@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bw.douyin"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="30" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 高通GPU调试权限 -->
+    <uses-permission android:name="com.qti.permission.PROFILER" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00030000"
+        android:required="true" />
+
+    <application
+        android:name="com.bw.douyin.application.DoyYin"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.bw.douyin.view.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bw.douyin.view.activity.SplashActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.bw.douyin.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name="cn.zhaoliang5156.shortvideolibrary.activity.DuetRecordActivity" />
+        <activity android:name="cn.zhaoliang5156.shortvideolibrary.activity.VideoPlayerActivity" />
+        <activity android:name="cn.zhaoliang5156.shortvideolibrary.activity.MusicPlayerActivity" />
+        <activity android:name="cn.zhaoliang5156.shortvideolibrary.activity.MainActivity" >
+        </activity>
+        <activity android:name="cn.zhaoliang5156.shortvideolibrary.activity.MusicMergeActivity" />
+        <activity
+            android:name="cn.zhaoliang5156.shortvideolibrary.activity.SpeedRecordActivity"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name="cn.zhaoliang5156.shortvideolibrary.activity.FFMediaRecordActivity"
+            android:theme="@style/NoActionBarTheme" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" /> <!-- 全面屏处理 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" /> <!-- 刘海屏处理 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" /> <!-- 全面屏处理 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+
+        <activity
+            android:name="com.cgfay.camera.activity.CameraActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity android:name="com.cgfay.camera.activity.CameraSettingActivity" />
+        <activity android:name="com.cgfay.camera.activity.WatermarkActivity" />
+        <activity android:name="com.cgfay.image.activity.ImagePreviewActivity" />
+        <activity android:name="com.cgfay.image.activity.ImageEditActivity" />
+        <activity
+            android:name="com.cgfay.video.activity.VideoCutActivity"
+            android:theme="@style/VideoTheme" />
+        <activity
+            android:name="com.cgfay.video.activity.VideoEditActivity"
+            android:theme="@style/VideoTheme" />
+        <activity
+            android:name="com.cgfay.video.activity.MultiVideoActivity"
+            android:theme="@style/VideoTheme" />
+        <activity
+            android:name="com.blankj.utilcode.util.UtilsTransActivity4MainProcess"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/ActivityTranslucent"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name="com.blankj.utilcode.util.UtilsTransActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:multiprocess="true"
+            android:theme="@style/ActivityTranslucent"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <provider
+            android:name="com.blankj.utilcode.util.UtilsFileProvider"
+            android:authorities="com.bw.douyin.utilcode.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/util_code_provider_paths" />
+        </provider>
+
+        <service
+            android:name="com.blankj.utilcode.util.MessengerUtils$ServerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.bw.douyin.messenger" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.camera.camera2.impl.Camera2Initializer"
+            android:authorities="com.bw.douyin.camerax-init"
+            android:exported="false"
+            android:initOrder="100"
+            android:multiprocess="true" />
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.bw.douyin.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

@@ -3,7 +3,20 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DouYin.iml" filepath="$PROJECT_DIR$/.idea/modules/DouYin.iml" group="DouYin" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="DouYin/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cameralibrary/cameralibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/cameralibrary/cameralibrary.iml" group="DouYin/cameralibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/douyinmain.iml" filepath="$PROJECT_DIR$/.idea/modules/app/douyinmain.iml" group="DouYin/douyinmain" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/facedetectlibrary/facedetectlibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/facedetectlibrary/facedetectlibrary.iml" group="DouYin/facedetectlibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/filterlibrary/filterlibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/filterlibrary/filterlibrary.iml" group="DouYin/filterlibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gdxlibrary/gdxlibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/gdxlibrary/gdxlibrary.iml" group="DouYin/gdxlibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imagelibrary/imagelibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/imagelibrary/imagelibrary.iml" group="DouYin/imagelibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/landmarklibrary/landmarklibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/landmarklibrary/landmarklibrary.iml" group="DouYin/landmarklibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/medialibrary/medialibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/medialibrary/medialibrary.iml" group="DouYin/medialibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pickerlibrary/pickerlibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/pickerlibrary/pickerlibrary.iml" group="DouYin/pickerlibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/shortvideo.iml" filepath="$PROJECT_DIR$/.idea/modules/app/shortvideo.iml" group="DouYin/shortvideo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shortvideolibrary/shortvideolibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/shortvideolibrary/shortvideolibrary.iml" group="DouYin/shortvideolibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utilslibrary/utilslibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/utilslibrary/utilslibrary.iml" group="DouYin/utilslibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/videolibrary/videolibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/videolibrary/videolibrary.iml" group="DouYin/videolibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/widgetlibrary/widgetlibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/widgetlibrary/widgetlibrary.iml" group="DouYin/widgetlibrary" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :MGFaceppSDK-0.4.7:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ce8366a554fdbe58937c72d3c525aafa/MGFaceppSDK-0.4.7/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ce8366a554fdbe58937c72d3c525aafa/MGFaceppSDK-0.4.7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ce8366a554fdbe58937c72d3c525aafa/MGFaceppSDK-0.4.7/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

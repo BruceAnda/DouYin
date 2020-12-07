@@ -1,0 +1,118 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.bw.douyin"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11"
+            }
+            ndk {
+                abiFilters "armeabi-v7a", "arm64-v8a"
+            }
+        }
+
+        // 设置支持multidex
+        multiDexEnabled true
+
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi-v7a', "arm64-v8a"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // Butterknife requires Java 8.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    repositories {
+        flatDir {
+            // 人脸关键点检测依赖库下放到facedetectlibrary
+            dirs project(':facedetectlibrary').file('libs')
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(':shortvideolibrary')
+    implementation project(':cameralibrary')
+    implementation project(':filterlibrary')
+    implementation project(':imagelibrary')
+    implementation project(':pickerlibrary')
+    implementation project(':medialibrary')
+    implementation project(':utilslibrary')
+    implementation project(':videolibrary')
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // 沉浸式状态栏 : https://github.com/gyf-dev/ImmersionBar
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+
+    // google官方ViewPager的升级版支持竖向滑动 https://developer.android.google.cn/jetpack/androidx/releases/viewpager2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
+    // ButterKnife 代替findViewById 和 setOnClickListener : https://github.com/JakeWharton/butterknife
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    /* RxJava依赖 */
+    implementation 'io.reactivex:rxjava:1.1.0'
+    implementation 'io.reactivex:rxandroid:1.1.0'
+
+    implementation 'com.google.android.material:material:1.2.0'   /* material 库*/
+
+    /* AndroidUtilCode https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md */
+    implementation 'com.blankj:utilcodex:1.30.5'
+
+    // 视频播放器 完整版引入
+    implementation 'com.shuyu:gsyVideoPlayer-java:7.1.8'
+    //根据你的需求ijk模式的so
+    implementation 'com.shuyu:gsyVideoPlayer-armv7a:7.1.8'
+    implementation 'com.shuyu:gsyVideoPlayer-arm64:8.0.0'
+
+    // 圆形头像
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // 点赞按钮
+    implementation 'com.jaren:likeview:1.2.2'
+
+    // 点赞按钮
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+
+    // Glide 图片库
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    // OkHttp
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+
+    /* 日志拦截器 */
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+
+    /* Fresco */
+    implementation 'com.facebook.fresco:fresco:2.3.0'
+}
