@@ -1,1 +1,4 @@
+include ':douyin'
+include ':videocache'
+include ':app'
 rootProject.name = "DouYin"

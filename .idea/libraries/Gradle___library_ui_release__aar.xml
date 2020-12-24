@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: :library-ui-release:@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/80695c6b0f5d5c93b1d102fbd252dca0/jetified-library-ui-release/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/80695c6b0f5d5c93b1d102fbd252dca0/jetified-library-ui-release/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/80695c6b0f5d5c93b1d102fbd252dca0/jetified-library-ui-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/80695c6b0f5d5c93b1d102fbd252dca0/jetified-library-ui-release/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :STMobileJNI:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/db85f6aa6f7d74effdd990c3eaa8aea0/STMobileJNI/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/db85f6aa6f7d74effdd990c3eaa8aea0/STMobileJNI/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/db85f6aa6f7d74effdd990c3eaa8aea0/STMobileJNI/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

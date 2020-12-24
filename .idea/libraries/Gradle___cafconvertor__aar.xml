@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :cafconvertor:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f0082a875d7653bc2bb9eff68248081d/jetified-cafconvertor/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f0082a875d7653bc2bb9eff68248081d/jetified-cafconvertor/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f0082a875d7653bc2bb9eff68248081d/jetified-cafconvertor/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

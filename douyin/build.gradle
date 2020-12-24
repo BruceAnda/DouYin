@@ -1,0 +1,243 @@
+apply plugin: 'com.android.application'
+def extraLibPath = meisheSdkExtraPath(rootDir)
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.3'
+
+    defaultConfig {
+        applicationId "com.meishe.videoshow"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 34
+        versionName "2.17.0"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        ndk {
+            abiFilters "armeabi-v7a"  // 指定要ndk需要兼容的架构(这样其他依赖包里mips,x86,armeabi,arm-v8之类的so会被过滤掉)
+        }
+        flavorDimensions "versionCode"
+
+        multiDexEnabled true
+    }
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+
+    signingConfigs {
+//        release {
+//            storeFile file("E:/FaceU/meishe.jks")   //签名文件全路径
+//            storePassword "app001ls"
+//            keyAlias "key0"
+//            keyPassword "app001"
+//        }
+        debug {
+        }
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"MS\""
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        release_MS_ST {
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"MS_ST\""
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        release_faceU {
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"FaceU\""
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"MS\""
+            minifyEnabled false
+            buildConfigField "Boolean", "PRINT_LOG", "true"
+            signingConfig signingConfigs.debug
+            debuggable true
+        }
+        debug_MS_ST {
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"MS_ST\""
+            minifyEnabled false
+            buildConfigField "Boolean", "PRINT_LOG", "true"
+            signingConfig signingConfigs.debug
+            debuggable true
+        }
+        debug_faceU {
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"FaceU\""
+            minifyEnabled false
+            buildConfigField "Boolean", "PRINT_LOG", "true"
+            signingConfig signingConfigs.debug
+            debuggable true
+        }
+
+        debug {
+            packagingOptions {
+                doNotStrip '**.so'
+            }
+        }
+    }
+
+    task libCopy(type: Copy) {
+        copy {
+            from extraLibPath + 'lib/android_armv7'
+            into 'src/main/jniLibs/armeabi-v7a'
+            include '*.so'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs './libs'
+        }
+    }
+    productFlavors {
+        _360 {}
+        tencent {}
+        baidu {}
+        oppo {}
+        vivo {}
+        huawei {}
+        xiaomi {}
+        googleplay {}
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    productFlavors.all {
+            //批量修改，类似一个循序遍历
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+    //对生成的apk进行一些简单的配置
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def buildName = "com.meishe"
+            def type = variant.buildType.name
+            if (type == "debug" || type == "debug_faceU") {
+                def releaseApkName = 'app-debug'
+                outputFileName = new File("../.././../../../build/outputs/apk/debug", releaseApkName + '_' + type + '.apk')
+            } else {
+                def releaseApkName = buildName + '_' + variant.productFlavors.get(0).name + '_' + type + "_" + versionName + '_' + releaseTime() + '.apk'
+                outputFileName = releaseApkName
+            }
+        }
+    }
+}
+
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd--HH-mm-ss", TimeZone.getTimeZone("GMT+8"))
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation project(path: ':videocache')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    implementation project(path: ':app')
+    // 日志拦截器
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    // 沉浸式状态栏 : https://github.com/gyf-dev/ImmersionBar
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+
+    // google官方ViewPager的升级版支持竖向滑动 https://developer.android.google.cn/jetpack/androidx/releases/viewpager2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
+    // ButterKnife 代替findViewById 和 setOnClickListener : https://github.com/JakeWharton/butterknife
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+
+    implementation 'com.google.android.material:material:1.2.0'
+
+    // AndroidUtilCode https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
+    implementation 'com.blankj:utilcodex:1.30.5'
+
+  /*  // 视频播放器 完整版引入
+    implementation 'com.shuyu:gsyVideoPlayer-java:7.1.8'
+    //根据你的需求ijk模式的so
+    implementation 'com.shuyu:gsyVideoPlayer-armv7a:7.1.8'
+    implementation 'com.shuyu:gsyVideoPlayer-arm64:8.0.0'*/
+
+    // 圆形头像
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // 点赞按钮
+
+    // 点赞按钮
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+
+    implementation 'com.android.support:multidex:1.2.0'
+
+    /* EventBus */
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
+    //播放器
+    implementation 'cn.jzvd:jiaozivideoplayer:7.5.0'
+
+}
+
+def meisheSdkExtraPath(File rootDir) {
+    String defaultPath = "../../../../"
+    try {
+        File confFile = new File(rootDir.getAbsolutePath() + "/../../../meishesdk_libpath.conf")
+        if (!confFile.exists()) {
+            if (confFile.createNewFile()) {
+                FileOutputStream outputStream = new FileOutputStream(confFile)
+                outputStream.write(defaultPath.getBytes())
+                outputStream.close()
+                return defaultPath
+            }
+        }
+        BufferedReader br = new BufferedReader(new FileReader(confFile))
+        String readline = ""
+        StringBuffer sb = new StringBuffer()
+        while ((readline = br.readLine()) != null) {
+            sb.append(readline)
+        }
+        br.close()
+        String pathTmp = sb.toString()
+        pathTmp = pathTmp.replace("\\", "/")
+        if (!pathTmp.endsWith("/")) {
+            pathTmp += "/"
+        }
+        if (pathTmp == null || pathTmp.isEmpty()) {
+            pathTmp = defaultPath
+        }
+        print("sdk path:" + pathTmp)
+        return pathTmp
+    } catch (Exception e) {
+        e.printStackTrace()
+    }
+    return defaultPath
+}
+
+afterEvaluate {
+    tasks.matching {
+        it.name.startsWith('dex')
+    }.each { dx ->
+        def listFile = project.rootDir.absolutePath+'/app/maindexlist.txt'
+        if (dx.additionalParameters == null) {
+            dx.additionalParameters = []
+        }
+        //表示当方法数越界时则生成多个dex文件（我的没有越界，貌似也生成了两个）
+        dx.additionalParameters += '--multi-dex'
+        //这个指定了listFile中的类（即maindexlist.txt中的类）会打包到主dex中，不过注意下一条。
+        dx.additionalParameters += '--main-dex-list=' +listFile
+        //表明只有-main-dex-list所指定的类（在我的配置中，就是app目录下的maindexlist.txt中包含的类）才能打包到主dex中，如果没有这个选项，上个选项就会失效
+        dx.additionalParameters += '--minimal-main-dex'
+    }
+}
+

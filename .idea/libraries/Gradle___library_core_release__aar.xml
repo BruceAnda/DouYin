@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: :library-core-release:@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8f84f6b9114becb5868c64a1b9f616d6/jetified-library-core-release/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8f84f6b9114becb5868c64a1b9f616d6/jetified-library-core-release/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8f84f6b9114becb5868c64a1b9f616d6/jetified-library-core-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8f84f6b9114becb5868c64a1b9f616d6/jetified-library-core-release/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

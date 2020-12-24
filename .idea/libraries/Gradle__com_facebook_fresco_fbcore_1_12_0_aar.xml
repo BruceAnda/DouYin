@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.facebook.fresco:fbcore:1.12.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c6cad6585869bc7b74199a41e28f09e/jetified-fbcore-1.12.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c6cad6585869bc7b74199a41e28f09e/jetified-fbcore-1.12.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c6cad6585869bc7b74199a41e28f09e/jetified-fbcore-1.12.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c6cad6585869bc7b74199a41e28f09e/jetified-fbcore-1.12.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.fresco/fbcore/1.12.0/e5e396dbc9aedc3e8203761b609a3c8d7d7ea9c9/fbcore-1.12.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.fresco/fbcore/1.12.0/229eab16677b4ec814a3b71aebf1f3e8b31c6610/fbcore-1.12.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
