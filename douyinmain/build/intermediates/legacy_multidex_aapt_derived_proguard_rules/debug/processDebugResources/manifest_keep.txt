@@ -1,4 +1,0 @@
-# Referenced at D:\code1806A\DouYin\douyinmain\build\intermediates\merged_manifests\debug\AndroidManifest.xml:16
--keep class androidx.core.app.CoreComponentFactory { <init>(); }
-# Referenced at D:\code1806A\DouYin\douyinmain\build\intermediates\merged_manifests\debug\AndroidManifest.xml:16
--keep class com.bw.douyin.application.DoyYin { <init>(); }
